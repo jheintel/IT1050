@@ -2,7 +2,7 @@
 
 namespace ConsoleApp1
 {
-    class VoterEligability
+    class Program
     {
         static void Main(string[] args)
         {
