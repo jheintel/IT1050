@@ -1,7 +1,0 @@
-C:\Users\Jon\Desktop\FirstSoln\FirstProj\bin\Debug\FirstProj.exe.config
-C:\Users\Jon\Desktop\FirstSoln\FirstProj\bin\Debug\FirstProj.exe
-C:\Users\Jon\Desktop\FirstSoln\FirstProj\bin\Debug\FirstProj.pdb
-C:\Users\Jon\Desktop\FirstSoln\FirstProj\obj\Debug\FirstProj.csprojAssemblyReference.cache
-C:\Users\Jon\Desktop\FirstSoln\FirstProj\obj\Debug\FirstProj.csproj.CoreCompileInputs.cache
-C:\Users\Jon\Desktop\FirstSoln\FirstProj\obj\Debug\FirstProj.exe
-C:\Users\Jon\Desktop\FirstSoln\FirstProj\obj\Debug\FirstProj.pdb
