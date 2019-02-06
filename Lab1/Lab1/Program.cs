@@ -41,8 +41,9 @@ namespace ConsoleApp1
                 heightFeet = int.Parse(Console.ReadLine());
                 Console.Write("and how many inches beyond that?: ");
                 heightInches = double.Parse(Console.ReadLine());
+                heightInches += heightFeet * INCHES_PER_FOOT;
 
-                totalHeightCM = (heightFeet * INCHES_PER_FOOT + heightInches) * INCHES_TO_CM;
+                totalHeightCM = heightInches * INCHES_TO_CM;
             }
 
             // Some personal questions for border security reasons
@@ -59,12 +60,12 @@ namespace ConsoleApp1
             // Print the whole mess out and hope the client doesn't look to closely at our methods
             {
                 Console.WriteLine();
-                Console.Write("So... \n" + "Your name is " + fullName + "\n" +
-                              "You are " + totalHeightCM + "cm tall \n");
+                Console.Write("So... \n" + "Your name is " + fullName + ",\n" +
+                              "you are " + totalHeightCM + "cm tall,\n");
                 if (canVote)
-                    Console.Write("and you are eligible to vote \n");
+                    Console.Write("and you are eligible to vote.\n");
                 else
-                    Console.Write("and you are not eligible to vote \n");
+                    Console.Write("and you are not eligible to vote.\n");
                 Console.WriteLine();
             }
 
