@@ -33,9 +33,9 @@ namespace ConsoleApp1
             /* Asks for the users height in feet and inches then converts it to some voodoo number
             that is yet to be understood by our engineers. */
             {
-                Console.Write("How many feet tall are you (excluding inches)?: ");
+                Console.Write("How many feet tall are you (excluding inches using numerals)?: ");
                 heightFeet = int.Parse(Console.ReadLine());
-                Console.Write("and how many inches beyond that?: ");
+                Console.Write("and how many inches beyond that?(Decimal): ");
                 heightInches = double.Parse(Console.ReadLine());
 
                 totalHeightCM = (heightFeet * 12 + heightInches) * 2.54;
