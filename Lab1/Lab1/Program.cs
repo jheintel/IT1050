@@ -26,11 +26,11 @@ namespace ConsoleApp1
                 Console.Write("What is your first name?        : ");
                 firstName = Console.ReadLine();
                 Console.Write("What is your middle initial?    : ");
-                middleInitial = Console.ReadLine() + ".";
+                middleInitial = Console.ReadLine();
                 Console.Write("What is your last name?         : ");
                 LastName = Console.ReadLine();
 
-                fullName = firstName + " " + middleInitial + " " + LastName;
+                fullName = firstName + " " + middleInitial + ". " + LastName;
             }
 
             /* Asks for the users height in feet and inches then converts it to some voodoo number
