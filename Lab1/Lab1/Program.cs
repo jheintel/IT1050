@@ -31,7 +31,7 @@ namespace ConsoleApp1
             }
 
             /* Asks for the users height in feet and inches then converts it to some voodoo number
-            that is yet to be understood by our eingineers. */
+            that is yet to be understood by our engineers. */
             {
                 Console.Write("How many feet tall are you (excluding inches)?: ");
                 heightFeet = int.Parse(Console.ReadLine());
