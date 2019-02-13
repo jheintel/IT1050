@@ -60,9 +60,14 @@ namespace Lab3
             PrintInfo(student.GetInstructor());
         }
 
-        public static void Write(string toShow)
+        public static void WriteUnformatted(string toShow)
         {
             IO.Write(toShow);
+        }
+
+        public static void NewLine()
+        {
+            Format("");
         }
 
         public static void ReadKey()
@@ -74,11 +79,6 @@ namespace Lab3
         {
             // 50 char wide
             IO.WriteLine("+------------------------------------------------+");
-        }
-
-        public static void NewLine()
-        {
-            Format("");
         }
 
         public static void Format(string toBeFormatted)

@@ -36,7 +36,7 @@
             Show.Divider();
 
             // Sit on our thumbs until, ideally, the heat death of the universe
-            Show.Write("Press any key to end existance...");
+            Show.WriteUnformatted("Press any key to end existance...");
             Show.ReadKey();
         }
     }
