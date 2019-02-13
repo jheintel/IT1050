@@ -1,11 +1,12 @@
-﻿using IO = System.Console;
-
-namespace Lab3
+﻿namespace Lab3
 {
     class Program
     {
         static void Main(string[] args)
         {
+            Show.SetWindowSize(50, 34);
+            Show.Divider();
+            
             // Create 2 Instructors and give 'em a class
             Instructor iJohn = new Instructor("John", "English");
             Instructor iMike = new Instructor("Mike", "Math");
@@ -15,24 +16,28 @@ namespace Lab3
             Student sJoe = new Student("Joe", iJohn);
             Student sMel = new Student("Melissa", iMike);
             Student sMat = new Student("Matt", iMike);
+            Show.Divider();
 
             // Have the Instructors assign their students grades
             iJohn.SetStudentGrade(sJane, 95);
             iJohn.SetStudentGrade(sJoe, 85);
             iMike.SetStudentGrade(sMel, 90);
             iMike.SetStudentGrade(sMat, 92);
-            //iMike.SetStudentGrade(sJane, 45);
+            Show.Divider();
 
             // Print to the console
-            IO.WriteLine();
-            sJane.PrintInfoSpaced();
-            sJoe.PrintInfoSpaced();
-            sMel.PrintInfoSpaced();
-            sMat.PrintInfoSpaced();
+            Show.PrintInfo(sJane);
+            Show.NewLine();
+            Show.PrintInfo(sJoe);
+            Show.NewLine();
+            Show.PrintInfo(sMel);
+            Show.NewLine();
+            Show.PrintInfo(sMat);
+            Show.Divider();
 
             // Sit on our thumbs until, ideally, the heat death of the universe
-            IO.Write("Press any key to end existance...");
-            IO.ReadKey();
+            Show.Write("Press any key to end existance...");
+            Show.ReadKey();
         }
     }
 }

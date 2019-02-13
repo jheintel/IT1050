@@ -1,18 +1,20 @@
-﻿using IO = System.Console;
-
-namespace Lab3
+﻿namespace Lab3
 {
     class Instructor
     {
-        private string Name;
-        private string CourseName;
+        private readonly string Name;
+        private readonly string CourseName;
 
-        // Please don't use
-        // I would need to add methods to change Name and CourseName if this is ever called
+        /* Please don't use
+         * I would need to add methods SetName and SetCourseName if this is ever called
+         * which would violate the readonly variables. Having this constructor is just
+         * bad code, really.
+         */
         public Instructor()
         {
             Name = "Missing Instructor";
             CourseName = "Missing Course";
+            Show.InstructorCreationMessage(Name, CourseName);
         }
 
         // Instructor Constructor
@@ -20,8 +22,7 @@ namespace Lab3
         {
             Name = givenName;
             CourseName = givenCourseName;
-            IO.Write("Instructor " + givenName + " added ");
-            IO.WriteLine("instructing " + givenCourseName);
+            Show.InstructorCreationMessage(givenName, givenCourseName);
         }
 
         // Method will only allow Students' Instructors to change grade
@@ -29,9 +30,9 @@ namespace Lab3
         public void SetStudentGrade(Student givenStudent, int newGrade)
         {
             if (givenStudent.GetInstructor().GetName() == Name)
-                givenStudent.SetGrade(newGrade);
+                givenStudent.Grade = newGrade;
             else
-                IO.WriteLine("Student is not in " + Name + "'s class");
+                Show.Format("Student is not in " + Name + "'s class");
         }
 
         public string GetName()
@@ -42,24 +43,6 @@ namespace Lab3
         public string GetCourse()
         {
             return CourseName;
-        }
-
-        // Two Methods to print because I wanted carriage returns, but only sometimes
-        public void PrintNameAndCourse()
-        {
-            IO.Write("Instructor: ");
-            IO.WriteLine(Name);
-            IO.Write("Course: ");
-            IO.WriteLine(CourseName);    
-        }
-
-        public void PrintNameAndCourseSpaced()
-        {
-            IO.Write("Instructor: ");
-            IO.WriteLine(Name);
-            IO.Write("Course: ");
-            IO.WriteLine(CourseName);
-            IO.WriteLine();
         }
     }
 }

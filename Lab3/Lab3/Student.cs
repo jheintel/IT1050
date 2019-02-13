@@ -1,19 +1,20 @@
-﻿using IO = System.Console;
-
-namespace Lab3
+﻿namespace Lab3
 {
     class Student
     {
-        private string Name;
-        private Instructor Teacher;
-        private int Grade;
+        private readonly string Name;
+        private readonly Instructor Teacher;
+        /* I was digging around in C# Guides after Visual Studio told me there was a better way
+         * so _grade is coded as a "property" but I left the others as originally written
+         */
+        private int _grade;
         
         // Can I just set Teacher = null? It feels wrong...
         public Student()
         {
             Name = "Unknown";
             Teacher = null; 
-            Grade = 0;
+            _grade = 0;
         }
 
         // Creates and reports to console a new Student
@@ -21,16 +22,8 @@ namespace Lab3
         {
             Name = givenName;
             Teacher = givenInstructor;
-            Grade = 0;
-
-            IO.Write("Student " + givenName + " has joined ");
-            IO.WriteLine(givenInstructor.GetName() + "'s " + givenInstructor.GetCourse() + " class");
-        }
-
-        // Changes Students grade and I feel like I'm over commenting
-        public void SetGrade(int givenGrade)
-        {
-            Grade = givenGrade;
+            _grade = 0;
+            Show.StudentCreationMessage(givenName, givenInstructor);
         }
 
         // Used to determine if Instructor can change Students' grades in a roundabout
@@ -41,24 +34,19 @@ namespace Lab3
             return Teacher;
         }
 
-        // Print out some stuff from the void and all hail Cthulhu ehrupjwecniwinpmwpecino
-        public void PrintInfo()
+        public string GetName()
         {
-            IO.Write("Student Name: ");
-            IO.WriteLine(Name);
-            IO.Write("Grade: ");
-            IO.WriteLine(Grade);
-            Teacher.PrintNameAndCourse();
+            return Name;
         }
 
-        public void PrintInfoSpaced()
+        public int Grade
         {
-            IO.Write("Student Name: ");
-            IO.WriteLine(Name);
-            IO.Write("Grade: ");
-            IO.WriteLine(Grade);
-            Teacher.PrintNameAndCourse();
-            IO.WriteLine();
+            get => _grade;
+            set
+            {
+                _grade = value;
+                Show.GradeChangeMessage(Teacher, this, _grade);
+            }
         }
     }
 }
