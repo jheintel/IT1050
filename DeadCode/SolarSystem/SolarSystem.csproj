@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DE0B94A7-9E46-40C5-ADBA-D8FF62E976F2}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SubClasses</RootNamespace>
-    <AssemblyName>SubClasses</AssemblyName>
+    <RootNamespace>SolarSystem</RootNamespace>
+    <AssemblyName>SolarSystem</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

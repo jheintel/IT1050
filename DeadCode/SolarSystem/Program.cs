@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SubClasses
+namespace SolarSystem
 {
     class Program
     {
