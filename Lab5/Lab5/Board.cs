@@ -4,6 +4,8 @@ namespace Lab5
 {
     class Board
     {
+        // Adding comment
+
         private int gridX;
         private int gridY;
 

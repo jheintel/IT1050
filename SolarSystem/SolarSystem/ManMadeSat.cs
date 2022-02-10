@@ -7,7 +7,7 @@ namespace SolarSystem
         public ManMadeSat(string primary, string name, string creator)
         {
             Name = name;
-            Primary = primary;
+            PrimaryName = primary;
             Creator = creator;
         }
 
